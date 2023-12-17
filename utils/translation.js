@@ -6,6 +6,7 @@ export const translations = {
     gallery: 'Galeria',
     claims: 'Livro de Reclamações Eletrónico',
     rights: 'Todos os direitos reservados',
+    home: 'Ínicio',
   },
   uk: {
     about: 'About Us',
@@ -14,5 +15,6 @@ export const translations = {
     gallery: 'Gallery',
     claims: 'Electronic Complaints Book',
     rights: 'All rights reserved',
+    home: 'Home',
   },
 };

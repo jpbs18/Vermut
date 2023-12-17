@@ -180,9 +180,10 @@ footer .navigation-list {
 
 footer .claims {
   display: flex;
-  width: 20%;
-  justify-content: space-around;
+  width: 50%;
+  justify-content: center;
   align-items: center;
+  gap: 2rem
 }
 
 footer .claims img {

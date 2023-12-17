@@ -1,16 +1,5 @@
-import {  Header, Main, Footer } from '../components'
+import Router from '../router';
 
-function App() {
+const App = () => <Router />;
 
-  return (
-    <>
-      <Header />
-      <Main />
-      <Main />
-      <Main />
-      <Footer />
-    </>
-  );
-}
-
-export default App
+export default App;
