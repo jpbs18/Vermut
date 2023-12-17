@@ -4,7 +4,7 @@ export const translations = {
     localization: 'Localização',
     menu: 'Menu',
     gallery: 'Galeria',
-    claims: 'Reclamações',
+    claims: 'Livro de Reclamações Eletrónico',
     rights: 'Todos os direitos reservados',
   },
   uk: {
@@ -12,7 +12,7 @@ export const translations = {
     localization: 'Localization',
     menu: 'Menu',
     gallery: 'Gallery',
-    claims: 'Claims',
+    claims: 'Electronic Complaints Book',
     rights: 'All rights reserved',
   },
 };

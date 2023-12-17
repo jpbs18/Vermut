@@ -35,6 +35,7 @@ ol {
 
 a {
   text-decoration: none;
+  color:black;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -141,7 +142,7 @@ main {
 footer {
   background-color: rgba(0, 0, 0, 0.203);
   margin-top: auto;
-  height: 35rem;
+  height: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -175,6 +176,17 @@ footer .navigation-list {
   display: flex;
   justify-content: space-around;
   width: 60%;
+}
+
+footer .claims {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .claims img {
+  width: 10rem;
 }
 
 footer .social-apps {

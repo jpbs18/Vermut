@@ -16,22 +16,21 @@ const Footer = () => {
         <p>+351 221 153 109 | +351 961 329 538</p>
       </div>
 
-      {!isMobile && <div className="navigation">
-        <ul className="navigation-list">
-          <li>
-            <a>{claims}</a>
-          </li>
-          <li>
-            <a>{about}</a>
-          </li>
-          <li>
-            <a>{localization}</a>
-          </li>
-          <li>
-            <a>{gallery}</a>
-          </li>
-        </ul>
-      </div>}
+      {!isMobile && (
+        <div className="navigation">
+          <ul className="navigation-list">
+            <li>
+              <a href="">{about}</a>
+            </li>
+            <li>
+              <a href="">{localization}</a>
+            </li>
+            <li>
+              <a href="">{gallery}</a>
+            </li>
+          </ul>
+        </div>
+      )}
 
       <div className="social-apps">
         <a
@@ -52,10 +51,19 @@ const Footer = () => {
         </a>
       </div>
 
+      <div className="claims">
+        <img src="livro-reclamacoes.png" alt="claims book" />
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.livroreclamacoes.pt/Inicio/"
+        >
+          {claims}
+        </a>
+      </div>
+
       <div className="copy-rights">
-        <p id="rights">
-          &copy;2024 Vermuteria da Baixa - {rights}{' '}
-        </p>
+        <p id="rights">&copy;2024 Vermuteria da Baixa - {rights} </p>
       </div>
     </footer>
   );
