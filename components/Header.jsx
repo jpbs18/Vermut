@@ -16,7 +16,7 @@ const Header = () => {
 
   const handleItemClick = () => {
     setShowDropdown(false);
-  }
+  };
 
   const handleDocumentClick = (event) => {
     const dropdown = document.getElementsByClassName('dropdown-wrapper')[0];
@@ -48,7 +48,9 @@ const Header = () => {
                 <NavLink to="/localization">{localization}</NavLink>
               </li>
               <li onClick={handleItemClick}>
-                <a>{menu}</a>
+                <NavLink to="https://linktr.ee/vermuteria.gastrobar">
+                  {menu}
+                </NavLink>
               </li>
               <li onClick={handleItemClick}>
                 <NavLink to="/gallery">{gallery}</NavLink>
@@ -60,25 +62,50 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <NavLink to="/">{home}</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              >
+                {home}
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/about">{about}</NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              >
+                {about}
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/localization">{localization}</NavLink>
+              <NavLink
+                to="/localization"
+                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              >
+                {localization}
+              </NavLink>
             </li>
             <li>
-              <a>{menu}</a>
+              <NavLink to="https://linktr.ee/vermuteria.gastrobar">
+                {menu}
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/gallery">{gallery}</NavLink>
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              >
+                {gallery}
+              </NavLink>
             </li>
           </ul>
         </nav>
       )}
       <div onClick={changeCountry}>
-        <img src={`${country}.png`} alt={`${country} flag`} />
+        <img
+          src={`${country === 'pt' ? 'uk' : 'pt'}.png`}
+          alt={`${country === 'pt' ? 'uk' : 'pt'} flag`}
+        />
       </div>
     </header>
   );
