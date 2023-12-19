@@ -44,7 +44,7 @@ a:not(.has-image):hover {
   color: rgb(239, 9, 9);
 }
 
-.active{
+.active {
   color: rgb(239, 9, 9);
 }
 
@@ -86,8 +86,13 @@ footer img {
 header {
   height: 10rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.header-mobile {
+  justify-content: space-between;
+  padding: 3rem;
 }
 
 header nav {
@@ -96,7 +101,11 @@ header nav {
 
 header ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.dropdown-wrapper {
+  position: relative;
 }
 
 .dropdown-content {
@@ -110,10 +119,6 @@ header ul {
 
 .dropdown-content li {
   margin: 1rem 0;
-}
-
-.dropdown-wrapper {
-  position: relative;
 }
 
 main {
@@ -140,8 +145,22 @@ main {
   object-fit: cover;
 }
 
-#mini-gallery img {
-  width: 20%;
+.mini-gallery {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.mini-gallery:hover {
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.mini-gallery img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -152,14 +171,11 @@ main {
   gap: 1rem;
   background-color: white;
   text-align: center;
-  max-width: 120rem;
-  margin: 0 auto;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
 }
 
 .information-table {
   background-color: white;
+  margin: 0 auto;
 }
 
 .information-table td {
@@ -169,15 +185,20 @@ main {
 .information-title {
   font-weight: bold;
   font-size: 2rem;
-  color:  rgb(111, 37, 37);
+  color: rgb(111, 37, 37);
+  background-color: white;
+}
+
+.reservation-btn-container {
+  margin: 0 auto;
+  margin-top: -1rem;
 }
 
 .reservation-btn {
   background-color: rgb(111, 37, 37);
-  width: 8%;
   text-align: center;
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem 2rem;
   margin: 0 auto;
   color: white;
   transition: 0.5s;
@@ -190,7 +211,7 @@ a.reservation-btn:hover {
 
 footer {
   background-color: rgba(0, 0, 0, 0.203);
-  margin-top: auto;
+  margin-top: 2rem;
   height: 40rem;
   display: flex;
   flex-direction: column;

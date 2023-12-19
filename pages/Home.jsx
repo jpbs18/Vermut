@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
+import { useCountry } from '../context/useCountry';
+import { translations } from '../utils/translation';
 
 const Home = () => {
+  const { country } = useCountry();
+  const { schedule, reservation, weekDays } = translations[country];
+
   return (
     <main className="main">
       <section id="presentation" className="container">
@@ -8,54 +13,29 @@ const Home = () => {
         <img src="vermuteria-balcony.jpg" alt="Vermuteria interior" />
       </section>
 
-      <section className="information">
-        <div>
-          <h1 className="information-title">Horário</h1>
-        </div>
-        <div>
-          <table className="information-table">
-            <tr>
-              <td>Segunda-feira</td>
-              <td>17:00 - 02h00</td>
-            </tr>
-            <tr>
-              <td>Terça-feira</td>
-              <td>17:00 - 02h00</td>
-            </tr>
-            <tr>
-              <td>Quarta-feira</td>
-              <td>17:00 - 02h00</td>
-            </tr>
-            <tr>
-              <td>Quinta-feira</td>
-              <td>17:00 - 02h00</td>
-            </tr>
-            <tr>
-              <td>Sexta-feira</td>
-              <td>17:00 - 02h00</td>
-            </tr>
-            <tr>
-              <td>Sábado</td>
-              <td>17:00 - 02h00</td>
-            </tr>
-            <tr>
-              <td>Domingo</td>
-              <td>17:00 - 02h00</td>
-            </tr>
-          </table>
-        </div>
-      </section>
-
-      <section id="mini-gallery" className="container">
+      <section className="mini-gallery">
         <img
           src="burratina-com-pesto-e.jpg"
           alt="Photo of burratina with pesto"
         />
         <img src="pan-pizza.jpg" alt="Photo of Pan-Pizza" />
-        <img
-          src="tiramisu-de-nuttella.jpg"
-          alt="Photo of Tiramisu de Nutella"
-        />
+
+        <section className="information">
+          <div>
+            <h1 className="information-title">{schedule}</h1>
+          </div>
+          <div>
+            <table className="information-table">
+              {weekDays.map((weekday) => (
+                <tr key={weekday}>
+                  <td>{weekday}</td>
+                  <td>17h - 2h</td>
+                </tr>
+              ))}
+            </table>
+          </div>
+        </section>
+
         <img
           src="hamburguer-prosciutto.jpg"
           alt="Photo of Hamburger Prosciutto"
@@ -66,9 +46,14 @@ const Home = () => {
         />
       </section>
 
-      <Link className="reservation-btn" to="https://widgets.vincitables.com/bookings/?wt_code=GINH-dc0c95-d6ec7d-1d8b81-f9abcb#">
-        Reservar
-      </Link>
+      <div className="reservation-btn-container">
+        <Link
+          className="reservation-btn"
+          to="https://widgets.vincitables.com/bookings/?wt_code=GINH-dc0c95-d6ec7d-1d8b81-f9abcb#"
+        >
+          {reservation}
+        </Link>
+      </div>
     </main>
   );
 };

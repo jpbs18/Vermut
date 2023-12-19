@@ -8,7 +8,7 @@ const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const { country, changeCountry } = useCountry();
   const isMobile = useResponsive();
-  const { about, localization, menu, gallery, home } = translations[country];
+  const { about, localization, menu, home } = translations[country];
 
   const toggleDropdown = () => {
     setShowDropdown((prevState) => !prevState);
@@ -32,7 +32,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="header">
+    <header className={`header${isMobile ? '-mobile' : ''}`}>
       {isMobile ? (
         <div className="dropdown-wrapper">
           <button onClick={toggleDropdown}>☰</button>
@@ -48,12 +48,9 @@ const Header = () => {
                 <NavLink to="/localization">{localization}</NavLink>
               </li>
               <li onClick={handleItemClick}>
-                <NavLink to="https://linktr.ee/vermuteria.gastrobar">
+                <NavLink to="https://widgets.vincitables.com/menu/?wt_code=GINH-dc0c95-d6ec7d-1d8b81-f9abcb">
                   {menu}
                 </NavLink>
-              </li>
-              <li onClick={handleItemClick}>
-                <NavLink to="/gallery">{gallery}</NavLink>
               </li>
             </ul>
           )}
@@ -86,16 +83,8 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="https://linktr.ee/vermuteria.gastrobar">
+              <NavLink to="https://widgets.vincitables.com/menu/?wt_code=GINH-dc0c95-d6ec7d-1d8b81-f9abcb">
                 {menu}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/gallery"
-                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
-              >
-                {gallery}
               </NavLink>
             </li>
           </ul>

@@ -1,13 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useCountry } from '../context/useCountry';
-import { useResponsive } from '../hooks/useResponsive';
 import { translations } from '../utils/translation';
 
 const Footer = () => {
   const { country } = useCountry();
-  const isMobile = useResponsive();
-  const { about, localization, claims, gallery, rights } =
-    translations[country];
+  const { claims, rights } = translations[country];
 
   return (
     <footer className="footer">
@@ -17,22 +14,6 @@ const Footer = () => {
         <p>41.14744 | -8.61376</p>
         <p>+351 221 153 109 | +351 961 329 538</p>
       </div>
-
-      {!isMobile && (
-        <div className="navigation">
-          <ul className="navigation-list">
-            <li>
-              <Link to="/about">{about}</Link>
-            </li>
-            <li>
-              <Link to="/localization">{localization}</Link>
-            </li>
-            <li>
-              <Link to="/gallery">{gallery}</Link>
-            </li>
-          </ul>
-        </div>
-      )}
 
       <div className="social-apps">
         <Link
