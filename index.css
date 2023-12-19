@@ -1,7 +1,18 @@
+:root {
+  --primary-color: rgb(111, 37, 37);
+  --secondary-color: rgb(239, 9, 9);
+  --background-color: rgb(250, 235, 215);
+  --secondary-background-color: rgb(250, 250, 250);
+  --box-shadow:  rgba(0, 0, 0, 0.2);
+  --box-shadow-hover: rgba(0, 0, 0, 0.4);
+  --font-family: 'Roboto', sans-serif;
+  --footer-bg-color: rgba(0, 0, 0, 0.203);
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 * {
@@ -21,11 +32,11 @@ body {
   text-rendering: optimizeSpeed;
   font-size: 1.6rem;
   min-height: 100vh;
-  background-color: antiquewhite;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   flex: 1;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-family);
 }
 
 ul,
@@ -35,17 +46,17 @@ ol {
 
 a {
   text-decoration: none;
-  color: rgb(111, 37, 37);
+  color: var(--primary-color);
   cursor: pointer;
   transition: 0.3s;
 }
 
 a:not(.has-image):hover {
-  color: rgb(239, 9, 9);
+  color: var(--secondary-color);
 }
 
 .active {
-  color: rgb(239, 9, 9);
+  color: var(--secondary-color);
 }
 
 button {
@@ -113,7 +124,7 @@ header ul {
   position: absolute;
   top: 100%;
   left: 0%;
-  background-color: antiquewhite;
+  background-color: var(--background-color);
   padding: 0 2rem 1rem 2rem;
 }
 
@@ -132,12 +143,12 @@ main {
   max-width: 120rem;
   margin: 0 auto;
   display: flex;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   transition: 0.5s;
 }
 
 .container:hover {
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-shadow-hover);
 }
 
 #presentation img {
@@ -150,12 +161,12 @@ main {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   transition: 0.5s;
 }
 
 .mini-gallery:hover {
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-shadow-hover);
 }
 
 .mini-gallery img {
@@ -169,12 +180,12 @@ main {
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
-  background-color: white;
+  background-color: var(--secondary-background-color);
   text-align: center;
 }
 
 .information-table {
-  background-color: white;
+  background-color: var(--secondary-background-color);
   margin: 0 auto;
 }
 
@@ -185,8 +196,8 @@ main {
 .information-title {
   font-weight: bold;
   font-size: 2rem;
-  color: rgb(111, 37, 37);
-  background-color: white;
+  color: var(--primary-color);
+  background-color: var(--secondary-background-color);
 }
 
 .reservation-btn-container {
@@ -195,22 +206,22 @@ main {
 }
 
 .reservation-btn {
-  background-color: rgb(111, 37, 37);
+  background-color: var(--primary-color);
   text-align: center;
   border-radius: 0.5rem;
   padding: 1rem 2rem;
   margin: 0 auto;
-  color: white;
+  color: var(--secondary-background-color);
   transition: 0.5s;
 }
 
 a.reservation-btn:hover {
-  background-color: rgb(231, 23, 23);
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--secondary-background-color);
 }
 
 footer {
-  background-color: rgba(0, 0, 0, 0.203);
+  background-color: var(--footer-bg-color);
   margin-top: 2rem;
   height: 40rem;
   display: flex;
@@ -218,7 +229,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 footer #title {
@@ -234,18 +245,6 @@ footer #rights {
 footer .copy-rights {
   border-top: 0.1rem solid black;
   padding: 1rem;
-}
-
-footer .navigation {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-footer .navigation-list {
-  display: flex;
-  justify-content: space-around;
-  width: 60%;
 }
 
 footer .claims {
