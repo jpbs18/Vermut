@@ -15,21 +15,6 @@ const Footer = () => {
         <p>+351 221 153 109 | +351 961 329 538</p>
       </div>
 
-      <div className="social-apps">
-        <Link
-          className="has-image"
-          to="https://www.instagram.com/vermuteriagastrobar/"
-        >
-          <img src="instagram.png" alt="instagram link" />
-        </Link>
-        <Link
-          className="has-image"
-          to="https://www.facebook.com/vermuteriadabaixa/?locale=pt_BR"
-        >
-          <img src="facebook.png" alt="facebook link" />
-        </Link>
-      </div>
-
       <div className="claims">
         <img src="livro-reclamacoes.png" alt="claims book" />
         <Link to="https://www.livroreclamacoes.pt/Inicio/">{claims}</Link>

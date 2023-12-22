@@ -3,10 +3,10 @@
   --secondary-color: rgb(239, 9, 9);
   --background-color: rgb(250, 235, 215);
   --secondary-background-color: rgb(250, 250, 250);
-  --box-shadow:  rgba(0, 0, 0, 0.2);
-  --box-shadow-hover: rgba(0, 0, 0, 0.4);
+  --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  --box-shadow-hover: 5px 5px 10px rgba(0, 0, 0, 0.5);
   --font-family: 'Roboto', sans-serif;
-  --footer-bg-color: rgba(0, 0, 0, 0.203);
+  --footer-bg-color: rgba(0, 0, 0, 0.2);
 }
 
 *,
@@ -101,35 +101,22 @@ header {
   align-items: center;
 }
 
-.header-mobile {
-  justify-content: space-between;
-  padding: 2.5rem;
-}
-
 header nav {
   width: 70%;
 }
 
 header ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 10rem;
 }
 
-.dropdown-wrapper {
-  position: relative;
-}
-
-.dropdown-content {
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  background-color: var(--background-color);
-  padding: 0 2rem 1rem 2rem;
-}
-
-.dropdown-content li {
-  margin: 1rem 0;
+.social-apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 2rem;
 }
 
 main {
@@ -139,19 +126,19 @@ main {
   padding: 2.5rem;
 }
 
-.container {
-  max-width: 120rem;
+.presentation {
+  max-width: 100rem;
   margin: 0 auto;
   display: flex;
   box-shadow: var(--box-shadow);
   transition: 0.5s;
 }
 
-.container:hover {
+.presentation:hover {
   box-shadow: var(--box-shadow-hover);
 }
 
-#presentation img {
+.presentation img {
   width: 50%;
   object-fit: cover;
 }
@@ -159,6 +146,7 @@ main {
 .mini-gallery {
   max-width: 120rem;
   margin: 0 auto;
+  height: 27rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   box-shadow: var(--box-shadow);
@@ -171,7 +159,7 @@ main {
 
 .mini-gallery img {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
 }
 
@@ -182,15 +170,15 @@ main {
   gap: 1rem;
   background-color: var(--secondary-background-color);
   text-align: center;
+  height: 90%;
 }
 
 .information-table {
-  background-color: var(--secondary-background-color);
   margin: 0 auto;
 }
 
 .information-table td {
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 
 .information-title {
@@ -200,12 +188,11 @@ main {
   background-color: var(--secondary-background-color);
 }
 
-.reservation-btn-container {
+.btn-container {
   margin: 0 auto;
-  margin-top: -1rem;
 }
 
-.reservation-btn {
+.btn {
   background-color: var(--primary-color);
   text-align: center;
   border-radius: 0.5rem;
@@ -215,15 +202,89 @@ main {
   transition: 0.5s;
 }
 
-a.reservation-btn:hover {
+a.btn:hover {
   background-color: var(--secondary-color);
   color: var(--secondary-background-color);
+}
+
+.about {
+  max-width: 130rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: var(--box-shadow);
+  transition: 0.5s;
+}
+
+.info:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.info img {
+ width:60%;
+ object-fit: cover;
+}
+
+.details {
+  background-color: var(--secondary-background-color);
+  max-width: 40%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  white-space: normal;
+  gap: 4rem;
+  padding:2rem;
+}
+
+.details img {
+  width: 3rem;
+}
+
+.details-title {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 2rem; 
+}
+
+.details-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#prefix {
+  font-weight: bold;
+}
+
+.details-location {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.details-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.social-media {
+  display: flex;
+  gap: 2rem;
 }
 
 footer {
   background-color: var(--footer-bg-color);
   margin-top: 2rem;
-  height: 40rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -257,12 +318,4 @@ footer .claims {
 
 footer .claims img {
   width: 10rem;
-}
-
-footer .social-apps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  width: 2rem;
 }
