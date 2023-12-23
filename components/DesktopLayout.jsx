@@ -85,7 +85,7 @@ const DesktopLayout = () => {
               </p>
             </div>
 
-            <div className="reservation-btn-container">
+            <div className="btn-container">
               <Link
                 className="btn"
                 to="https://www.google.com/maps/dir//R.+de+C%C3%A2ndido+dos+Reis+126,+4050-151+Porto/@41.1470722,-8.6158227,17.25z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd2464e2e69e2637:0xc3b2513d6ed00aff!2m2!1d-8.613762!2d41.1474347?entry=ttu"
