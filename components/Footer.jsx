@@ -16,8 +16,9 @@ const Footer = () => {
       </div>
 
       <div className="claims">
-        <img src="livro-reclamacoes.png" alt="claims book" />
-        <Link to="https://www.livroreclamacoes.pt/Inicio/">{claims}</Link>
+        <Link to="https://www.livroreclamacoes.pt/Inicio/" target="_blank">
+          <img src="livro-reclamacoes.png" alt="claims book" />
+        </Link>
       </div>
 
       <div className="copy-rights">
