@@ -4,7 +4,7 @@ import { translations } from '../utils/translation';
 
 const MobileLayout = () => {
   const { country } = useCountry();
-  const { reservation, claims, rights } = translations[country];
+  const { reservation, rights } = translations[country];
 
   return (
     <div className="mobile-container">

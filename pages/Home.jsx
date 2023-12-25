@@ -2,7 +2,7 @@ import { DesktopLayout, MobileLayout } from '../components';
 import { useResponsive } from '../hooks/useResponsive';
 
 const Home = () => {
-  const isMobile = useResponsive();
+  const { isMobile } = useResponsive();
 
   return isMobile ? <MobileLayout /> : <DesktopLayout />;
 };

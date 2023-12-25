@@ -12,5 +12,9 @@ export const useResponsive = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return windowWidth <= 450;
+  return {
+    isMobile: windowWidth <= 450,
+    isTablet: windowWidth > 450 && windowWidth <= 850,
+    isDesktop: windowWidth > 850
+  };
 };

@@ -4,7 +4,7 @@ import { Header, Footer } from '../components';
 import { useResponsive } from '../hooks/useResponsive';
 
 const Router = () => {
-  const isMobile = useResponsive();
+  const { isMobile } = useResponsive();
 
   return (
     <BrowserRouter>
