@@ -144,7 +144,7 @@ main {
 }
 
 .mini-gallery {
-  max-width: 100rem;
+  max-width: 120rem;
   margin: 0 auto;
   height: 25rem;
   display: grid;
