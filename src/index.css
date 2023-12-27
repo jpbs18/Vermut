@@ -150,7 +150,6 @@ main {
 }
 
 .mini-gallery {
-  position: sticky;
   top: 10rem;
   max-width: 120rem;
   margin: 0 auto;
